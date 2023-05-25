@@ -1,0 +1,247 @@
+%-------------------------
+% Resume in Latex
+% Author : Sourabh Bajaj + some brand new features from Mary Feofanova
+% Website: https://github.com/sb2nov/resume
+%------------------------
+
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage{makecell}
+\usepackage[link=off]{phonenumbers}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\usepackage[margin=0.3in]{geometry}
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.0in}
+\addtolength{\evensidemargin}{-0.0in}
+\addtolength{\textwidth}{0in}
+\addtolength{\topmargin}{0pt}
+\addtolength{\textheight}{0.0in}
+
+\urlstyle{same}
+
+\usepackage{xcolor}% http://ctan.org/pkg/xcolor
+\usepackage{hyperref}% http://ctan.org/pkg/hyperref
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue!50!red,
+  linkbordercolor=red,
+  urlcolor=blue!70!black
+}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-10pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\def \ifempty#1{\def\temp{#1} \ifx\temp\empty }
+
+\newcommand{\resumeItem}[2]{
+  \item\small{
+  	\ifempty{#1}#2\else\textbf{#1}{: #2 \vspace{-2pt}}\fi
+  }
+}
+
+% \usepackage[dvipsnames]{xcolor}
+\definecolor{mygray}{gray}{0}
+\usepackage{fancybox}
+
+\usepackage{lmodern}
+\usepackage{tikz}
+
+% Style definition
+\tikzset{rndblock/.style={rounded corners,rectangle,draw,outer sep=0pt}}
+
+% Command Definition
+% 1 optional to customize the aspect, 2 mandatory: text to be framed
+\newcommand{\tframed}[2][]{\tikz[baseline=(h.base)]\node[rndblock,#1] (h) {\color{black}{#2}};}
+
+\newcommand*{\mystrut}{\rule[-0.2\baselineskip]{0pt}{0.8\baselineskip}}
+\newcommand{\skill}[1]{\tframed[lightgray]{\mystrut#1}}
+
+\newcommand{\resumeSummerySubheading}[4]{
+\small
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textcolor{mygray}{#2} \\
+      \textit{\small#3} & \textcolor{mygray}{\textit{\small #4}} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeExpSubheading}[5]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1}  & \textcolor{mygray}{#2} \\
+      \textit{\small#3} & \textcolor{mygray}{\textit{\small #4}} \\
+      {\scriptsize#5}
+    \end{tabular*}\vspace{4pt}
+}
+
+\newcommand{\resumeProjSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1}  & \textcolor{mygray}{#2} \\
+      \scriptsize {#3} & \textcolor{mygray}{\textit{\small #4}} \\
+    \end{tabular*}\vspace{4pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.1in]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.1in]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-1pt}}
+
+\usepackage{changepage}
+\newcommand{\resumeDesc}[1]{\begin{adjustwidth}{2pt}{0pt}\vspace{-2pt}{\small{#1}}\end{adjustwidth}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\Large{Ivan Nasonov}} & Github: \href{https://github.com/NasonovIvan}{NasonovIvan} \quad LinkedIn: \href{https://www.linkedin.com/in/ivan-nasonov/}{Ivan Nasonov}\\
+  \textbf{Data Scientist} & Email : \href{nasonov.ia18@physics.msu.ru}{nasonov.ia18@physics.msu.ru} \quad Mobile : +7\hspace{0.5ex}996\hspace{0.5ex}793\hspace{0.5ex}34\hspace{0.5ex}12 \\
+\end{tabular*}
+
+%----------SUMMARY-----------------
+\section{Summary}
+    % \resumeSummerySubheading
+    \small{
+    Physics graduate with a Bachelor's degree from MSU, currently pursuing a Master's degree. Skilled in machine learning (RL, CV, TR, RNN) for solving control problems, image recognition, and sequence classification. Published 1 article in Automation and Remote Control journal, with 2 more in progress. Completed 7 ML projects, demonstrating strong practical experience. Collaborative team player with a 2nd place win in the All-Russian Hackathon for Telegram Bots.}
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+      \resumeExpSubheading
+      {Institute of Control Sciences of Russian Academy of Sciences}{Moscow, RU}
+      {Data Scientist, Engineer of lab. control based on incomplete data}{Oct. 2021 - Present}
+      {\skill{Python} \skill{TensorFlow}}
+      \resumeDesc{
+      \begin{itemize}
+          \item Leveraging machine learning (RL, CV, TR, RNN) for addressing control problems, image recognition, and sequence classification, with presentations at All-Russian conferences on control systems and mathematical theory of control.
+      \end{itemize}
+      }
+      \resumeExpSubheading
+      {GreenEco Investments}{Moscow, RU}
+      {\makecell[l]{Data Analyst team}}{\makecell[r]{May 2021 - Mar. 2022}}
+      {\skill{Climate research}}
+      \resumeDesc{\begin{itemize}
+          \item Engaged in reducing emissions, decarbonization, and forest/peat bog expansion projects while collaborating with Joint Crediting Mechanism, VERRA, Gold Standard, and Climate Action Reserve, and performing carbon market analysis.
+      \end{itemize}}
+  \resumeSubHeadingListEnd
+
+%----------Projects-----------------
+\section{Projects}
+  \resumeSubHeadingListStart
+      \resumeProjSubheading
+      {\href{https://github.com/NasonovIvan/NN-whale-recognition}{Neural Network For Whale Detection}}{Moscow, RU}
+      {\skill{Python} \skill{TensorFlow}}{Dec. 2022 - Mar. 2023}
+          \resumeDesc{Transfer learning of the Xception network was used for recognizing and classifying whale voices using spectrograms.}
+          
+      \resumeProjSubheading
+      {\href{https://github.com/NasonovIvan/ROTI-map-forecast}{ROTI Maps Daily Prediction}}{Moscow, RU}
+      {\skill{Python} \skill{TensorFlow}}{Sept. 2022 - Jan. 2023}
+          \resumeDesc{Using deep learning and Recurrent Neural Networks, daily prediction and synthesis of ROTI maps based on geomagnetic and solar indices were obtained.}
+      
+  \resumeSubHeadingListEnd
+
+%----------Achievements-----------------
+\section{Achievements}
+  \resumeSubHeadingListStart
+          
+    \resumeProjSubheading
+      {\href{https://github.com/NasonovIvan/BookingBot21}{Weeklython} - II place [All-Russian Hackathon]}{Moscow, RU}
+      {\skill{Python} \skill{SQLAlchemy} \skill{Web UI}}
+      {Aug. 2022}
+          \resumeDesc{Developed Telegram bot for booking School Objects. The project contains CI/CD technology, Database project, IDEF0 diagram, UI/UX project in Figma.}
+          
+    \resumeProjSubheading
+      {\href{https://github.com/NasonovIvan/Marusia}{Marusia Game Challenge} - Prize-winning place [Hackathon VK]}{Moscow, RU}
+      {\skill{C++}}
+      {Aug. 2020}
+          \resumeDesc{Algorithmic solution finding in games for training the voice assistant Marusia of VK company.}
+  \resumeSubHeadingListEnd
+%--------Publications------------
+  \section{Publications}
+  \resumeSubHeadingListStart
+  \item{\href{https://www.researchgate.net/publication/369658302_Neural_Network_Algorithm_for_Intercepting_Targets_Moving_Along_Known_Trajectories_by_a_Dubins'_Car}{\textbf{Neural Network Algorithm for Intercepting Targets Moving Along Known Trajectories by a Dubins’ Car}}
+   }\vspace{-2pt}
+ \resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+       {Lomonosov Moscow State University}{Moscow, RU}
+       {Master's degree in Physics}{Sept. 2022 - Aug. 2024 (Present)}
+    \resumeSubheading
+      {Lomonosov Moscow State University}{Moscow, RU}
+      {Bachelor of Physics}{Sept. 2018 - Jul. 2022}
+	\resumeItemListStart
+        \resumeItem{Thesis}
+          {{\href{https://github.com/NasonovIvan/pursuit-evasion-problem}{A neural network algorithm for intercepting targets moving along known trajectories by a Dubins' machine.}}}
+    \resumeItemListEnd
+  \resumeSubHeadingListEnd
+  
+
+%-----------ADDITIONAL EDUCATION-----------------
+\section{Additional Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+       {School21 -- peer-to-peer coding school fostering practical learning}{Moscow, RU}{Programming school}{Apr. 2022 - Jun. 2024 (Present)}
+    \resumeSubheading
+       {deeplearning.ai}{Coursera}{The Deep Learning Specialization}{Mar. 2020 - May 2020}
+    \resumeItemListStart
+        \resumeItem{Subjects}
+          {Neural Networks and Deep Learning; Hyperparameter tuning, Regularization and Optimization; Convolutional Neural Networks; Sequence Models; Recurrent Neural Networks}
+    \resumeItemListEnd
+  \resumeSubHeadingListEnd
+  
+%--------PROGRAMMING SKILLS------------
+\section{Programming Skills}
+ \begin{itemize}[leftmargin=0.1in]
+ \setlength\itemsep{0.5em}
+   \item{
+     \textbf{Languages}{: C, C++, Python, Bash }
+   }\vspace{-7pt}
+   \item{
+     \textbf{Technologies}{: ML, DL, RL, CV, TR, SQL, Git, \LaTeX, MPI for Python }
+   }
+   \vspace{-7pt}
+   \item{
+     \textbf{Knowledge}{: Algorithms, Data Structures, Parallel Programming}
+   }
+ \end{itemize}
+
+
+%-------------------------------------------
+\end{document}
