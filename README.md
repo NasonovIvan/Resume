@@ -1,4 +1,4 @@
-# Resume-Latex
+# Resume
 A customizable LaTeX template for professional resumes. Create polished, standout resumes effortlessly. Open-source and easy to use.
 
 The original template was developed by Sourabh Bajaj, and additional features have been added by Mary Feofanova.
